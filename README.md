@@ -19,7 +19,7 @@ LDAP service is microservice to store AD/LDAP configuration  and perform user au
 
 	```shell
 	go get github.com/kazoup/ldap-srv
-	ldpa-srv
+	ldap-srv
 	```
 
 	OR as a docker container
