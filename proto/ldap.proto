@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+service LDAP{
+	rpc Create(CreateRequest) returns (CreateResponse){}
+}
+
+message Config {
+	string base_dn = 1;
+	string host = 2;
+	uint32 port = 3;
+	bool   use_ssl = 4;
+	string bind_dn = 5;
+	string bind_password= 6;
+	string user_filter = 7;
+	string group_filter =8;
+  repeated string attr =9;
+
+}
+message CreateRequest{
+	Config config = 1;
+}
+message CreateResponse{}
