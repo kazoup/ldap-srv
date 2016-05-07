@@ -1,6 +1,6 @@
 # LDAP SERVICE
 
-LDAP service is microservice to store AD/LDAP configuration  and perform user auth.
+LDAP service is microservice to store AD/LDAP configuration in Elasticsearch and perform user auth.
 
 ## Getting started
 
