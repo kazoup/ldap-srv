@@ -1,7 +1,9 @@
 syntax = "proto3";
 
 service LDAP{
-	rpc Create(CreateRequest) returns (CreateResponse){}
+	rpc Bind(BindRequest) returns (BindResponse){}
+	rpc Login(LoginRequest) returns (LoginResponse){}
+	rpc Search(SearchRequest) returns (SearchResponse){}
 }
 
 message Config {
@@ -16,7 +18,12 @@ message Config {
   repeated string attr =9;
 
 }
-message CreateRequest{
+message BindRequest{
 	Config config = 1;
 }
-message CreateResponse{}
+message BindResponse{}
+
+message LoginRequest{}
+message LoginResponse{}
+message SearchRequest{}
+message SearchResponse{}

@@ -9,14 +9,14 @@ import (
 	"golang.org/x/net/context"
 )
 
-//Config ...
-type Config struct{}
+//LDAP ...
+type LDAP struct{}
 
-//Create ...
-func (c *Config) Create(
+//Bind ...
+func (c *LDAP) Bind(
 	ctx context.Context,
-	req *ldap.CreateRequest,
-	res *ldap.CreateResponse) error {
+	req *ldap.BindRequest,
+	res *ldap.BindResponse) error {
 	//Check if req not empty
 	log.Print(req)
 	if req.Config == nil {
@@ -41,7 +41,23 @@ func (c *Config) Create(
 	if err != nil {
 		return errors.BadRequest("com.kazoup.srv.ldap.Config.Create Can not bind to AD", err.Error())
 	}
-	//TODO: We succesfuly bind to AD lets save in ES es-srv
+	return nil
+}
 
+//Login ...
+func (c *LDAP) Login(
+	ctx context.Context,
+	req *ldap.LoginRequest,
+	res *ldap.LoginResponse) error {
+	//TODO implement
+	return nil
+}
+
+//Search ...
+func (c *LDAP) Search(
+	ctx context.Context,
+	req *ldap.SearchRequest,
+	res *ldap.SearchResponse) error {
+	//TODO implement
 	return nil
 }

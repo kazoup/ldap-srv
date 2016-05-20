@@ -18,7 +18,7 @@ func main() {
 		}),
 	)
 	service.Init()
-	ldap.RegisterLDAPHandler(service.Server(), new(handler.Config))
+	ldap.RegisterLDAPHandler(service.Server(), new(handler.LDAP))
 	//Run the server
 	if err := service.Run(); err != nil {
 		fmt.Println(err)

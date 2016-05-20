@@ -1,6 +1,14 @@
 # LDAP SERVICE
 
-LDAP service is microservice to store AD/LDAP configuration in Elasticsearch and perform user auth.
+LDAP service is microservice based on go-micro for LDAP/AD binding and authentication. [![CircleCI](https://circleci.com/gh/kazoup/ldap-srv/tree/master.svg?style=svg)](https://circleci.com/gh/kazoup/ldap-srv/tree/master) [![Docker Repository on Quay](https://quay.io/repository/kazoup/ldap-srv/status "Docker Repository on Quay")](https://quay.io/repository/kazoup/ldap-srv)
+
+## API endpoints
+
+RPC  | Description
+-----|------------
+Bind | used to bind to LDAP/AD
+Login | used to authenticate
+Search | search user and return user info and groups
 
 ## Getting started
 
